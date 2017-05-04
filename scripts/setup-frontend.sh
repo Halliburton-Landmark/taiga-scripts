@@ -15,7 +15,8 @@ cat > /tmp/conf.json <<EOF
     "termsOfServiceUrl": null,
     "maxUploadFileSize": null,
     "gitHubClientId": null,
-    "contribPlugins": []
+    "contribPlugins": [],
+    "gravatar": false
 }
 EOF
 
