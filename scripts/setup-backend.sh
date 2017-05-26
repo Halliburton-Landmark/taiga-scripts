@@ -34,7 +34,7 @@ if [ ! -e ~/taiga-back ]; then
     git clone https://github.com/taigaio/taiga-back.git taiga-back
 
     pushd ~/taiga-back
-    git checkout -f Tags/3.0.0
+    git checkout -f tags/3.0.0
 
     # rabbit-create-user-if-needed taiga taiga  # username, password
     # rabbit-create-vhost-if-needed taiga
@@ -59,8 +59,8 @@ if [ ! -e ~/taiga-back ]; then
 else
     pushd ~/taiga-back
     git fetch
-    git checkout -f Tags/3.0.0
-    git reset --hard origin/Tags/3.0.0
+    git checkout -f tags/3.0.0
+    git reset --hard origin/tags/3.0.0
 
     workon taiga
     pip install -r requirements.txt
