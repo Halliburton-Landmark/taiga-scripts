@@ -1,6 +1,6 @@
 #!/bin/bash
 
-FRONTEND_VERSION="stable"
+FRONTEND_VERSION="3.0.0-stable"
 
 pushd ~
 
@@ -25,7 +25,7 @@ if [ ! -e ~/taiga-front ]; then
     # Initial clear
     git clone https://github.com/taigaio/taiga-front-dist.git taiga-front
     pushd ~/taiga-front
-    git checkout -f stable
+	git checkout -f Tags/3.0.0-stable
 
     mv /tmp/conf.json dist/
 
@@ -33,8 +33,8 @@ if [ ! -e ~/taiga-front ]; then
 else
     pushd ~/taiga-front
     git fetch
-    git checkout -f stable 
-    git reset --hard origin/stable
+    git checkout -f Tags/3.0.0-stable 
+    git reset --hard origin/Tags/3.0.0-stable
     popd
 fi
 
